@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -14,6 +15,21 @@ import java.util.List;
 @Table(name = "t_blogposts")
 @NamedQuery(name = "BlogPost.findAll", query = "SELECT p FROM t_blogposts p")
 public class BlogPost {
+
+    public BlogPost(
+            String title,
+            String description,
+            String content,
+            Author author,
+            Landmark landmark
+    ) {
+        this.title = title;
+        this.description = description;
+        this.content = content;
+        this.author = author;
+        this.landmark = landmark;
+        this.invocations = new ArrayList<>();
+    }
 
     @Id
     @GeneratedValue
