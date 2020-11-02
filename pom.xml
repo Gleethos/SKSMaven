@@ -57,7 +57,6 @@
     </build>
 
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -139,6 +138,13 @@
             <artifactId>objenesis</artifactId>
             <version>3.1</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupid>org.hibernate</groupid>
+            <artifactid>hibernate-core</artifactid>
+            <version>5.4.22.Final</version>
+            <scope>runtime</scope>
         </dependency>
 
     </dependencies>

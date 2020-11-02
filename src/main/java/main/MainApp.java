@@ -1,9 +1,15 @@
 package main;
 
+import main.entities.BlogPost;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.Arrays;
 
 public class MainApp {
     public static void main(String[] args) {
+
         if (args.length == 0) {
             System.out.println("Usage: MainApp [number1] [number2] ... [numberN]");
         }
@@ -11,6 +17,7 @@ public class MainApp {
             int[] numbers = Arrays.stream(args)
                     .mapToInt(Integer::parseInt)
                     .toArray();
+
 
             //Statistics statistics = new Statistics(numbers);
 //
